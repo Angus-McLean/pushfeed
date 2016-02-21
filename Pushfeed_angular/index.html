@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Pushfeed</title>
+        
+        <link rel="stylesheet" href="/css/styles.css">
+        
+        <!-- Angular Material CSS -->
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+		<link rel="icon" href="http://www.pushfeed.io/images/favicon.ico" type="image/x-icon" />
+
+        
+        <!-- Angular Libraries -->
+        <script src="/bower_components/angular/angular.min.js"></script>
+        <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+        
+        <!-- Angular Material Library -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+
+        <!-- Initialized Application -->
+        <script src="config.js"></script>
+        <script src="application.js"></script>
+        
+        <!-- User Auth -->
+        <script type="text/javascript" src="/modules/users/services/AuthService.service.js"></script>
+        
+        <!-- Navigation Module -->
+        
+        <script type="text/javascript" src="/modules/navigation/navigation.moduleReg.js"></script>
+        <script type="text/javascript" src="/modules/navigation/controllers/navigation.controller.js"></script>
+        
+        
+        <script type="text/javascript" src="/modules/navigation/directives/menuLink.directive.js"></script>
+        <script type="text/javascript" src="/modules/navigation/directives/menuToggle.directive.js"></script>
+        <script type="text/javascript" src="/modules/navigation/services/navSecService.service.js"></script>
+        <script type="text/javascript" src="/modules/navigation/navigation.module.js"></script>
+        
+    </head>
+    <body ng-app="Pushfeed">
+        <section layout="row" flex>
+            <!--<div ui-view="nav"></div>-->
+            <div id="#content" style="background-color:#f7f7f7;" ng-include="'/modules/navigation/views/sidenav.html'" ng-controller="HomeCtrl as vm"></div>
+            <md-content flex ui-view="content"></md-content>
+        </section>
+        
+        
+        
+        
+    </body>
+    
+</html>
+

@@ -1,0 +1,19 @@
+<md-sidenav id="nav-bar" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+    <md-toolbar class="md-theme-indigo">
+        
+        <img src="http://www.pushfeed.io/images/pushfeed4.svg"></img>
+        
+    </md-toolbar>
+      <md-content flex role="navigation">
+        <ul class="side-menu">
+          <li ng-repeat="section in vm.menu.sections" class="parent-list-item" ng-class="{'parentActive' : vm.isSectionSelected(section)}">
+            <h2 class="menu-heading" ng-if="section.type === 'heading'" id="heading_{{ section.name }}">
+              {{section}}
+            </h2>
+            <menu-link section="section" ng-if="section.type === 'link'"></menu-link>
+            <menu-toggle section="section" ng-if="section.type === 'toggle'"></menu-toggle>
+          </li>
+        </ul>
+
+      </md-content>
+</md-sidenav>
